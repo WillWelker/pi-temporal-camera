@@ -1,7 +1,8 @@
 #!/bin/bash
 #Setup script for the Pi Temporal Camera
 
-#fswebcam is a Linux command line utility for USB web cams 
-#install fswebcam
-apt-get install -y fswebcam
+today=`date +%Y-%m-%d.%H:%M:%S`
+
+mv etc/motion/motion.conf etc/motion/motion-$today.conf
+
 
