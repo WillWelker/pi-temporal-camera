@@ -19,9 +19,9 @@ Install Motion.
 ```
 sudo apt-get install motion
 ```
-Once motion is installed there are a couple files to configure.  You can backup the exisitning motion.conf file and download a file I have already set up with this command line entry:
+Once motion is installed there are a couple files to configure.  You can backup the exisitning motion.conf file and download a file I have already set up with this command line entry (the -n option prevents overwriting an existing backup):
 ```
-sudo mv /etc/motion/motion.conf /etc/motion/motion-backup.conf; wget https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/motion/motion.conf; sudo mv motion.conf /etc/motion/motion.conf
+sudo mv -n /etc/motion/motion.conf /etc/motion/motion-backup.conf; wget https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/motion/motion.conf; sudo mv motion.conf /etc/motion/motion.conf
 ```
 
 For more info about setting up Motion on you Pi: https://www.youtube.com/watch?v=AejagSlRHQU "Motion Video"
