@@ -1,12 +1,20 @@
 #!/bin/bash
-# Setup script for the Pi Temporal Camera
-##############################################
-# motion setup
-##############################################
+
+# To set up Node Red, run:
+# bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)
+# From the official Node Red Pi page: https://nodered.org/docs/hardware/raspberrypi
+
+# Then run this script with sudo or use sudo as needed for each item below if you do this manually.
+systemctl enable nodered.service
+# This makes Node Red start autmatically at boot
+
+# Install Motion
+apt-get install motion
+
 # make a variable with a timestamp for backup file names
 today=`date +%Y-%m-%d.%H:%M:%S`
 
-# make a back directory for motion.conf
+# make a backup directory for motion.conf
 mkdir etc/motion/motion-backup
 
 # move and rename the existing motion.conf file to the backup directory
@@ -17,6 +25,7 @@ wget https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/moti
 
 # move the downloaded motion.conf file to the proper directory
 mv motion.conf etc/motion/motion.conf
+
 
 ##############################################
 # Node Red static directory setup
@@ -34,6 +43,6 @@ mkdir /home/pi/.node-red/static/img
 # gif directory for the final gif to be stored in
 mkdir /home/pi/.node-red/static/gif
 
-#command line entry:
-
-
+# Node Red Dashboard install (you can install this with the Pallet Manager if you want
+cd /home/pi/.node-re/
+npm i node-red-dashboard
