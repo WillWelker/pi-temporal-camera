@@ -15,16 +15,16 @@ apt-get install motion
 today=`date +%Y-%m-%d.%H:%M:%S`
 
 # make a backup directory for motion.conf
-mkdir etc/motion/motion-backup
+mkdir /etc/motion/motion-backup
 
 # move and rename the existing motion.conf file to the backup directory
-mv etc/motion/motion.conf etc/motion/motion-backup/motion-$today.conf
+mv /etc/motion/motion.conf etc/motion/motion-backup/motion-$today.conf
 
 # get the motion.conf file used in the pi-temporal-camera project
 wget https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/motion/motion.conf
 
 # move the downloaded motion.conf file to the proper directory
-mv motion.conf etc/motion/motion.conf
+mv motion.conf /etc/motion/motion.conf
 
 
 ##############################################
