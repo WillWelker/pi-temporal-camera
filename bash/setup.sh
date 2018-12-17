@@ -26,6 +26,9 @@ wget https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/moti
 # move the downloaded motion.conf file to the proper directory
 mv motion.conf /etc/motion/motion.conf
 
+# Enable motion to start on boot
+systemctl enable motion
+
 
 ##############################################
 # Node Red static directory setup
