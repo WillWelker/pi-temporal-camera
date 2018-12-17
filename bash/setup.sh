@@ -44,5 +44,5 @@ mkdir /home/pi/.node-red/static/img
 mkdir /home/pi/.node-red/static/gif
 
 # Node Red Dashboard install (you can install this with the Pallet Manager if you want
-cd /home/pi/.node-re/
+cd /home/pi/.node-red/
 npm i node-red-dashboard
