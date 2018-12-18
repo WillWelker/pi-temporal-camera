@@ -5,4 +5,4 @@
 
 cd /home/pi/.node-red
 wget https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/bash/make-gif.sh
-wget https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/bash/count-gif.sh
+wget https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/bash/count-images.sh
