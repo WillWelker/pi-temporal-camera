@@ -1,7 +1,7 @@
 # pi-temporal-camera
 Put a time lapse gif image in your Node Red dashboard to watch your plants grow
 
-![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/example-gifs/cat.gif "Example Gif")
+![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/example-gifs/pea-shoots.gif "Example Gif")
 
 ### Node Red Setup
 Node Red is already installed on your Pi but we need to update it.  Here is the official Node Red page for updating your Pi:
