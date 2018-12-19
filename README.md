@@ -40,15 +40,21 @@ Now point your browser to localhost:1880 or from another computer on your networ
 For example: 192.168.1.130:1880.
 And for the Dashboard user interface 192.168.1.130:1880/ui.
 
-###Staic Files
-We need to edit settings.js to allow static files like pictures to be served from your pi.  We will also enable persistant storage.  I like to edit this files with Geany.  Right click the file on your pi and select Geany.
+### Staic Files
+We need to edit settings.js to allow static files like pictures to be served from your pi.  We will also enable persistant storage.  I like to edit files on the pi with Geany.  Right click the file on your pi and select Geany.
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/geany.jpg "Geany")
+
 We need to uncomment the static file entry and correct the path.
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/httpStatic.png "httpStatic")
-These static directories do not exist yet.  So in /.node-re/ make a new directory named 'static'.  Then in side /static/ make 'seq', 'img', and 'gif' directories.
-![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/static-directories.jpg "directories")
+
+These static directories do not exist yet.  So in /.node-red/ make a new directory named 'static'.  Then in side /static/ make 'seq', 'img', and 'gif' directories.
+
+![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/static-directories.png "directories")
+
 Then we will uncomment the entry for context data storage.
+
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/contextStorage.png "ContextStorage")
+
 
 
 From your node view, you can now import a flow.  In the node-red directory of this repo, there is a file called
@@ -56,8 +62,8 @@ flows_nodered.json.
 https://github.com/WillWelker/pi-temporal-camera/blob/master/node-red/flows_nodered.json
 You can copy the line of code from this file and import it into Node Red.
 
-###Bash Scripts
-There are two bash script that need tp be placed into your /.node-red/ directory.
+### Bash Scripts
+There are two bash scripts that need tp be placed into your /.node-red/ directory.
 https://github.com/WillWelker/pi-temporal-camera/tree/master/bash
 We need count-images.sh and make-gif.sh.  As always, read a script carufully before executing it.  These are fairly simple and well commented.
 If you are using the usual path of /home/pi/.node-red/ then no changes need to be made.  But if you have it installed at a different location, you will need to adjust the file paths in the scripts, exec nodes and template nodes.
@@ -66,6 +72,7 @@ If you are using the usual path of /home/pi/.node-red/ then no changes need to b
 ffmpeg is a useful program for converting one video format to another.  Also images to video and video to animated gif.  Which is what we will do.
 Install it with:
 ```sudo apt-get install ffmpeg```
+
 When you read the make-gif.sh, you will see how this program builds gifs from a sequence of images.
 As it happens, you can use this script to convert any sequence of images to a gif.
 
