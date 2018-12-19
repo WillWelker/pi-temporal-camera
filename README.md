@@ -2,6 +2,8 @@
 Put a time lapse gif image in your Node Red dashboard to watch your plants grow
 
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/example-gifs/pea-shoots.gif "Example Gif")
+Screenshot:
+![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/example-gifs/Screenshot.png "Screenshot")
 
 This works with a Raspberry Pi camera.  We will be using the raspistill command to take pictures every few minutes.
 Then, each day, or when ever you want, a gif will be created with ffmpeg.
