@@ -31,7 +31,7 @@ cd to your /.node-red/ directory and issue:
 npm install node-red-dashboard
 ```
 
-### Staic Files
+### Static Files
 We need to edit settings.js to allow static files like pictures to be served from your pi.  We will also enable persistant storage.  I like to edit files on the pi with Geany.  Right click the file on your pi and select Geany.
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/geany.jpg "Geany")
 
