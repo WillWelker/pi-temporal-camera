@@ -2,6 +2,7 @@
 Put a time lapse gif image in your Node Red dashboard to watch your plants grow
 
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/example-gifs/pea-shoots.gif "Example Gif")
+
 Screenshot:
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/example-gifs/Screenshot.png "Screenshot")
 
