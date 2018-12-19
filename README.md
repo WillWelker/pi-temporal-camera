@@ -62,8 +62,8 @@ Varify you have the Dashboard nodes:
 
 From your node view, you can now import a flow.  In the node-red directory of this repo, there is a file called
 flows_nodered.json.
-https://github.com/WillWelker/pi-temporal-camera/blob/master/node-red/flows_nodered.json
-You can copy the line of code from this file and import it into Node Red.
+https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/node-red/flows_nodered.json
+You can copy the code from this file and import it into Node Red from the menu > Import > Clipboard and paste it in.
 
 ### Bash Scripts
 There are two bash scripts that need tp be placed into your /.node-red/ directory.
