@@ -22,6 +22,7 @@ bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/
 ```
 We also need Dashboard for Node Red.  You can install it via the Palette Manager in Node Red, 
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/menu.jpg "Menu")
+
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/palette.jpg "Palette")
 
 or
@@ -29,6 +30,21 @@ cd to your /.node-red/ directory and issue:
 ```
 npm install node-red-dashboard
 ```
+
+### Staic Files
+We need to edit settings.js to allow static files like pictures to be served from your pi.  We will also enable persistant storage.  I like to edit files on the pi with Geany.  Right click the file on your pi and select Geany.
+![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/geany.jpg "Geany")
+
+We need to uncomment the static file entry and correct the path.
+![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/httpStatic.png "httpStatic")
+
+Then we will uncomment the entry for context data storage.
+
+![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/contextStorage.png "ContextStorage")
+
+These static directories do not exist yet.  So in /.node-red/ make a new directory named 'static'.  Then in side /static/ make 'seq', 'img', and 'gif' directories.
+
+![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/static-directories.png "directories")
 
 If you want Node Red to run automaticlly at boot, issue:
 ```
@@ -39,21 +55,8 @@ You can run ```node-red-start``` or reboot to verify it is running at boot.
 Now point your browser to localhost:1880 or from another computer on your network, enter the pi's IP address.
 For example: 192.168.1.130:1880.
 And for the Dashboard user interface 192.168.1.130:1880/ui.
-
-### Staic Files
-We need to edit settings.js to allow static files like pictures to be served from your pi.  We will also enable persistant storage.  I like to edit files on the pi with Geany.  Right click the file on your pi and select Geany.
-![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/geany.jpg "Geany")
-
-We need to uncomment the static file entry and correct the path.
-![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/httpStatic.png "httpStatic")
-
-These static directories do not exist yet.  So in /.node-red/ make a new directory named 'static'.  Then in side /static/ make 'seq', 'img', and 'gif' directories.
-
-![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/static-directories.png "directories")
-
-Then we will uncomment the entry for context data storage.
-
-![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/contextStorage.png "ContextStorage")
+Varify you have the Dashboard nodes:
+![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/dash.png "Dashboard Nodes")
 
 
 
