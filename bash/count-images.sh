@@ -4,7 +4,7 @@
 
 img=0
 
-#for loop to iterate through images and count them
+# for loop to iterate through images and count them
 for i in /home/pi/.node-red/static/seq/*.jpg; do
   
   let img=img+1
