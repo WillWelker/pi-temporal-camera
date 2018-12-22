@@ -7,5 +7,5 @@
 
 # Note: ./ inicates the current working directory. 
 # It means 'here'.
-scp pi@192.168.1.130:/home/pi/.node-red/count-images.sh ./
+
 scp pi@192.168.1.130:/home/pi/.node-red/make-gif.sh ./
