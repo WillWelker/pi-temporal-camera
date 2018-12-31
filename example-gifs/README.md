@@ -12,5 +12,5 @@ See wheatgrass go from yellow to green.
 ### Wheatgrass
 Pea shoots wave around like sea anemone.
 
-![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/example-gifs/pea-shoots.gif "Wheatgrass")
+![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/example-gifs/wheatgrass.gif "Wheatgrass")
 
