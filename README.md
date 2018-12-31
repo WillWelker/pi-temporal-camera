@@ -38,7 +38,9 @@ We need to edit settings.js to allow static files like pictures to be served fro
 We need to uncomment the static file entry and correct the path.
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/httpStatic.png "httpStatic")
 
-These static directories do not exist yet.  So in /.node-red/ make a new directory named 'static'.  Then in side /static/ make 'seq', 'img', and 'gif' directories.
+These static directories do not exist yet.  So in /.node-red/ make a new directory named 'static'.  Then in side /static/ make 'seq', 'img', and 'gif' directories.  Inside the gif directory, make and 'old' directory for old gif files to be stored.  Here is a one-liner that will make all of these directories (only use this for the usual .node-red location on your Pi):
+
+```mkdir -p /home/pi/.node-red/static/gif/old; mkdir /home/pi/.node-red/static/img; mkdir /home/pi/.node-red/static/seq```
 
 ![alt text](https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/images/static-directories.png "directories")
 
@@ -64,11 +66,13 @@ You can copy the code from this file and import it into Node Red from the menu >
 ### Bash Scripts
 There is a bash scripts that needs to be placed into your /.node-red/ directory.
 https://github.com/WillWelker/pi-temporal-camera/tree/master/bash
-You will need make-gif.sh.  As always, read a script carufully before executing it.  This fairly simple and well commented.
-If you are using the usual path of /home/pi/.node-red/ then no changes need to be made.  But if you have Node Red installed at a different location, you will need to adjust the file paths in the script, exec nodes and template nodes.
+You will need make-gif.sh.  As always, read a script carufully before executing it.  This one is fairly simple and well commented.
+If you are using the usual path of /home/pi/.node-red/ then no changes need to be made.  But if you have Node Red installed at a different location, you will need to adjust the file paths in the script, exec nodes and template nodes.  Here is a command that will download the bash file and make it executable:
+
+```cd /home/pi/.node-red; wget https://raw.githubusercontent.com/WillWelker/pi-temporal-camera/master/bash/make-gif.sh; chmod +x make-gif.sh```
 
 ### ffmpeg
-ffmpeg is a useful program for converting one video format to another.  Also images to video and video to animated gif.  Which is what we will do.
+ffmpeg is a useful program for converting one video format to another.  Also images to video and video to animated gif, which is what we will do.
 Install it with:
 ```sudo apt-get install ffmpeg```
 

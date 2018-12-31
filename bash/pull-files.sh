@@ -6,6 +6,6 @@
 # With ssh keys enable, no password is needed.
 
 # Note: ./ inicates the current working directory. 
-# It means 'here'.
+# You can copy/paste or execute the bash script.
 
 scp pi@192.168.1.130:/home/pi/.node-red/make-gif.sh ./
