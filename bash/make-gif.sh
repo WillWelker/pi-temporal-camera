@@ -1,6 +1,5 @@
 #!/bin/bash
 # This bash script runs a program called ffmpeg that can change picture, audio and video formats
-# ffmpeg is probably already installed on your Raspberry Pi
 # We will use it to convert an image sequence to a video then video to animated gif
 
 
