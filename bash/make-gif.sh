@@ -18,15 +18,15 @@ done
 # Make a video from the image sequence
 ffmpeg -r 12 -f image2 -s 640x480 -i /home/pi/.node-red/static/img/%03d.jpg -vcodec libx264 -crf 25  -pix_fmt yuv420p /home/pi/.node-red/static/gif/gif.mp4
 # -r is the framerate (fps)
-# -crf is the quality, lower means better quality, 15-25 is usually good
+# -crf is the quality, lower means better quality
 # -f force format
 # -s is the resolution
-# -pix_fmt yuv420p specifies the pixel format, change this as needed
+# -pix_fmt yuv420p specifies the pixel format
 
 # make a color pallete for gif
 ffmpeg -y -i /home/pi/.node-red/static/gif/gif.mp4 -vf fps=12,scale=480:-1:flags=lanczos,palettegen /home/pi/.node-red/static/gif/palette.png
 
-# Uncomment next line to remove old gifs
+# Uncomment next line to delete old gifs
 #rm /home/pi/.node-red/static/gif/*.gif
 mv /home/pi/.node-red/static/gif/*.gif /home/pi/.node-red/static/gif/old/
 
